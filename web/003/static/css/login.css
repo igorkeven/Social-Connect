@@ -1,0 +1,74 @@
+body {
+    background: linear-gradient(to bottom left, #00ff00, #0000ff  );
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+#logo {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: -10%;
+}
+
+img , #logo h1 {
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 50%;
+    padding: 20px;
+    width: 300px;
+    background: linear-gradient(to bottom left, #0000ff ,#00ff00   );
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+label, input {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+button {
+    background-color: #04AA6D;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+button:hover {
+    background-color: #008cba;
+    
+}
+
+
+
+
