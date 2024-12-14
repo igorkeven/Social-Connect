@@ -1,0 +1,46 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    
+
+    
+}
+
+
+.navbar {
+    background-color: var(--tema);
+    color: white;
+    position: fixed;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    width: 90%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 8%;
+    z-index: 3;
+
+
+}
+
+.logo_navbar {
+    width: 65px;
+    height: 65px;
+}
+
+.btn_navbar a {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
