@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <title>Social Connect</title>
+   
+
+    
+</head>
+
+<body style="background-image: url('{{img_capa}}');" >
+    
+
+    <div class="navbar">
+<img class="logo_navbar" src="/static/imagens/logo-transparente.png" alt="logo Social Connect" >
+Social Connect
+
+<div class="btn_navbar">
+    
+    <a href="/sair">Sair</a>
+</div>
+
+
+    </div>
+
+  <script>
+
+function mudarTema(tema) {
+    document.documentElement.style.setProperty('--tema', tema)
+}
+
+window.addEventListener('load', function () {
+    var tema = "{{tema}}";
+    mudarTema(tema);
+});
+
+  </script>
+
+</body>
+</html>
