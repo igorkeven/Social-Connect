@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <title>Social Connect</title>
+   
+
+    
+</head>
+
+<body style="background-image: url('{{img_capa}}');" >
+    
+
+    <div class="navbar">
+<img class="logo_navbar" src="/static/imagens/logo-transparente.png" alt="logo Social Connect" >
+Social Connect
+
+<div class="btn_navbar">
+    
+    <a href="/sair">Sair</a>
+</div>
+    </div>
+
+
+
+<aside class="perfil" >
+
+<img src="{{img_perfil}}" alt="foto de perfil" title="click para mudar foto" width="200" height="150" id="foto_perfil"> 
+<br>
+
+<h1 class="nome"> {{nome}} </h1>
+<div class="menu_lateral_esquerdo">
+
+
+    <div class="menu_lateral_esquerdo_1">
+<h3 class="menu_perfil" id="btn_fotos">Fotos</h3>
+<h3 class="menu_perfil" id="btn_videos">Videos</h3>
+<h3 class="menu_perfil" id="btn_amigos">Amigos</h3>
+<h3 class="menu_perfil" id="btn_mensagens">Mensagens</h3>
+<h3 class="menu_perfil" id="btn_postagens">Minhas postagens</h3>
+<h3 class="menu_perfil" id="btn_config">Configurações</h3>
+    </div>
+
+    <div class="menu_lateral_esquerdo_2">
+<span class="coston-icon btn_voltar_config" id="btn_voltar_config">voltar</span>
+
+<h3 class="menu_perfil" id="escolha_formulario_senha">Mudar senha</h3>
+<h3 class="menu_perfil" id="btn_mudar_tema">Mudar Tema</h3>
+<h3 class="menu_perfil" id="btn_mudar_capa">Trocar Foto de capa</h3>
+<h3 class="menu_perfil" id="btn_apagar_conta">Apagar minha conta</h3>
+
+
+    </div>
+
+</div>
+
+
+<div id="rodape">
+    by Igor Keven 2024 &copy; <br>
+    <a class="politicas">Politicas de privacidade</a><br>
+    <a class="politicas">Termos e Condições</a>
+
+</div>
+
+
+</aside>
+
+
+
+<div class="conteudo" >
+
+<div id="feed">
+{% include 'feed.html' %}
+</div>
+
+<div id="mudar_senha" class="">
+
+    {% include 'mudar_Senha.html' %}
+
+</div>
+
+<div id="mudar_tema" class="">
+   {% include 'mudar_tema.html' %}
+</div>
+
+<div id="mudar_capa" class="">
+    {% include 'mudar_capa.html' %}
+</div>
+
+
+</div>
+
+
+<aside class="lateral_direita">
+
+
+    <div class="menu_lateral_direito">
+<h3 >Propagandas chatas mas que pagam as contas</h3>
+    </div>
+    <div class="menu_lateral_direito">
+        <h3> convites de amizade</h3>
+    </div>
+
+</aside>
+
+
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+  <script>
+
+function mudarTema(tema) {
+    document.documentElement.style.setProperty('--tema', tema)
+}
+
+window.addEventListener('load', function () {
+    var tema = "{{tema}}";
+    mudarTema(tema);
+});
+
+  </script>
+
+</body>
+</html>
