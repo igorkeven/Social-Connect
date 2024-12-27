@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<div class=" formulario_post feed">
+    <h1>Qual a boa de hoje ?</h1>
+    <button class="topo divOculta" >topo</button>
+
+    <form action="#" method="post" id="formPost" enctype="multipart/form-data" style="display: flex; flex-direction: column;">
+        <textarea name="texto" id="texto" placeholder="Digite seu texto aqui..."  ></textarea>
+<div class="btn_formPost" style="display: flex; justify-content: space-between; align-items: center;">
+
+    <div class="camera">
+        <label for="imagem" style="margin-right: 10px; cursor: pointer;" id="imagemid">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <input type="file" name="imagem" id="imagem" accept="image/*" style="display: none;" >
+        </label>
+
+        <label for="video" style="cursor: pointer;" id="videoid">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            <input type="file" id="video" name="video" accept="video/*" style="display: none;">
+        </label>
+
+    </div>
+
+<input type="submit" value="Postar">
+</div>
+
+
+    </form>
+</div>
+
+{% set menssagens = get_flashed_messages() %}
+{% if menssagens %}
+  <div id="alerta" class="feed">
+    {{menssagens[0]}}
+  </div>
+{% endif %}
+
+<script>
+    setTimeout(function () {
+        document.getElementById('alerta').style.display = 'none';
+        
+    }, 10000)
+</script>
